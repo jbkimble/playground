@@ -19,6 +19,9 @@ func main() {
 }
 ```
 
+## Operators
+
+
 ## Types
 
 Array: fixed length list of things, must be defined with the data type it contains
@@ -60,7 +63,8 @@ Function Signature: The declarative line of a function
 
 
 ``` go
-func (t typeName) methodName(v1 typeName, size int) (returnValue, returnValue2) {
+// a reciever t of type typeName 
+func (t typeName) methodName(v1 typeName, size int) (returnType, returnType2) {
     return 1, 2
 }
 
@@ -97,7 +101,19 @@ func newCard() string {
 
 ## Scope
 - Files in the same package can freely call functions defined in other files
-- 
+
+## Files
+- Every file must declare at the top of the file the package it belongs to `package main`
+
+## Testing
+- How do we decide what to test?  What are we actually testing?  What do I really care about?
+- Create a new file in the project directory that ends in _test.go
+- Test function names start with `Test` and then the name of the function or functions you are testing i.e. `func TestNewDeck(t *testing.T) {}` or `func TestSaveToDeckandNewDeckFromFile(t *testing.T) {}`
+- `$go test // executes all test files in the directory`
+- You have to take care of cleanup yourself There is no file cleanup so you have to manually do it (i.e. it writes some file in a test you have to delete it)
+
+``` go
+```
 
 ## Lexicon
 - Method: a function that belongs to an instance
@@ -106,7 +122,16 @@ func newCard() string {
 ## Questions
 - Do we have to explicitly declare return value types?
 - What is the difference between a function and a method?
+- On a high level what are we trying to do?
+- What are the edge cases?
+- What could be a problem down the road?
 
 # Language Quirks
 - Go's random number generator always starts with the same seed, you will always get the same squence of random numbers unless you set your own seed.
 - Not O.O. there is no idea of classes, instead we take a type and extend it by adding some extra functionality (functions).  A function with a receiver is like a method.
+
+ # General Learning
+ - Briefly explain your approach and possible challenges you overcame.
+ - How did you do on this exercise?
+- Take a moment to reflect on what you learned from this exercise
+ - What went well?  How could be improved?
