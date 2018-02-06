@@ -1,58 +1,7 @@
 # Go Notes 
 <!-- rename language guide and then make a cheat_sheet?   -->
----
----
----
----
 
 ## Table of Contents
-
-[Resources](#resources)
-
-[Lexicon](#lexicon)
-
-[My Questions](#my-questions)
-
-## Fundamentals
-[Command Line](#command-line)
-
-[**Types**](#types)
-- [Slice](#slice)
-- [Struct](#struct)
-- [Interface](#interface)
-
-[Variables](#variables)
-
-[Operators](#operators)
-
-[Functions](#functions)
-
-[Loops](#loops)
-
-[Routines](#routines)
-
-[Channels](#channels)
-
-[Errors](#errors)
-
-[Scope](#scope)
-
-[Files](#files)
-
-
-## Data Structures
-
-## Misc
-[Language Quirks](#language-quirks)
-
-[Tools](#tools)
-
-[Testing](#testing)
-
-[General Learning](#general-learning)
-
-[Misc Notes](#misc-notes)
-
 
 ---
 ---
