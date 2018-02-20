@@ -29,6 +29,7 @@ Word | Definition
 ***Referencing*** | a pointer, a value that directs the computer to the actual location of some data in memory
 ***Dereferencing*** | Accessing the data at a certain memory location.  Turning a pointer into the data it points at
 ***Pointer*** | A value that refers to another value stored elsewhere in the computer
+***Package*** | A project in a go, a collection of common files
 ***Functions*** | a named procedure that performs a distinct service
 ***Operator*** | The basic functions of a programming language
 
@@ -39,14 +40,43 @@ Word | Definition
 # Fundamentals
 
 ## Command Line 
-`$ go run main.go // run a go package`
+`$ go run main.go` // run a go package (compiles and executes)
 
-`$ go build main.go` // saves an executable file of your code in the current directory
+`$ go build main.go` // saves an executable file of your code in the current directory (compiles)
 
 `$ ./main` // run an executable file
 
+`go test` // runs tests
+
+`go fmt` // formats all the code in the current directory
+
+`go install` // compiles and installs a package
+
+`go get` // downloads the raw source code of a package
+
 ## VSCode
 - command click a go method name to open the source code
+
+## File Setup and Project Organization 
+- Every file must declare at the top of the file the package it belongs to `package main`
+- package `main` is reserved for creating executable packages, any other package name is a reusable package that can only be used as a dependency (aka a set of helper functions)
+- 
+
+``` go
+// package main will compile into an executable file
+package main
+
+// import packages at the top of a file
+import (
+    "fmt"
+    "io/ioutil"
+)
+
+func main() {
+    // every package called 'main' must have a function called 'main' inside of it
+    // main() function will be auto called when a package called main is executed
+}
+```
 
 ## Types
 
@@ -321,23 +351,6 @@ c := make(chan string)
 ## Scope
 - Files in the same package can freely call functions defined in other files
 
-## Files
-- Every file must declare at the top of the file the package it belongs to `package main`
-
-``` go
-// package main will compile into an executable file
-package main
-
-// import packages at the top of a file
-import (
-    "fmt"
-    "io/ioutil"
-)
-
-func main() {
-    // main() function will be auto called when a package called main is executed
-}
-```
 
 
 
